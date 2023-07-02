@@ -5,8 +5,13 @@ import 'package:meal_monkey/core/constant/textstyle_manager.dart';
 
 class CustomButton extends StatelessWidget {
   final String? text;
-  final VoidCallback? whenTap;
-  const CustomButton({super.key, @required this.text, @required this.whenTap});
+  final void Function()? whenTap;
+  final double? value;
+  const CustomButton(
+      {super.key,
+      @required this.text,
+      @required this.whenTap,
+      @required this.value});
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +21,7 @@ class CustomButton extends StatelessWidget {
           width: SizeConfig.screenWidth,
           height: 60,
           decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(5),
+            borderRadius: BorderRadius.circular(value!),
             color: Palette.mainColor,
           ),
           child: Center(

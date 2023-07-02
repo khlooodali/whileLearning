@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:meal_monkey/core/constant/palette.dart';
@@ -10,6 +12,13 @@ class SplashView extends StatefulWidget {
 }
 
 class _SplashViewState extends State<SplashView> {
+
+  Timer?timer;
+  @override
+  void initState() {
+
+    super.initState();
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -59,7 +68,7 @@ class _SplashViewState extends State<SplashView> {
               Text(
                 'Food Delivery',
                 style: TextStyle(fontSize: 15, color: Color(0xff4A4B4D)),
-              )
+              ),
             ],
           ),
         )
