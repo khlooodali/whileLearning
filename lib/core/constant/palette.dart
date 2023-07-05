@@ -10,4 +10,5 @@ class Palette {
   static const Color textFiledColor = Color(0xFFF2F2F2);
   static const Color facebookColor = Color(0xFF367FC0);
   static const Color googleColor = Color(0xFFDD4B39);
+  static const Color lightColor = Color(0xFFF6F6F6);
 }

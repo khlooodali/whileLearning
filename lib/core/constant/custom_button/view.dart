@@ -7,11 +7,12 @@ class CustomButton extends StatelessWidget {
   final String? text;
   final void Function()? whenTap;
   final double? value;
+  final double? height;
   const CustomButton(
       {super.key,
       @required this.text,
       @required this.whenTap,
-      @required this.value});
+      @required this.value,this.height=60});
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +20,7 @@ class CustomButton extends StatelessWidget {
       onTap: whenTap,
       child: Container(
           width: SizeConfig.screenWidth,
-          height: 60,
+          height: height,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(value!),
             color: Palette.mainColor,

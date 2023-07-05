@@ -37,6 +37,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   animate_do: ^3.0.2
   dots_indicator: ^3.0.0
+  curved_nav_bar: ^0.0.2
 
 dev_dependencies:
   flutter_test:
