@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:meal_monkey/features/dessert/view.dart';
 import 'package:meal_monkey/features/menue/item.dart';
 
+import '../../core/constant/navigation/nextpage.dart';
 import '../../core/constant/palette.dart';
 import '../../core/constant/search_buttn/view.dart';
 import '../../core/constant/textstyle_manager.dart';
@@ -11,8 +13,8 @@ class MenueView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+      body: ListView(
+        //crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Padding(
             padding: const EdgeInsets.only(top: 53, left: 21, right: 5),
@@ -40,21 +42,27 @@ class MenueView extends StatelessWidget {
               Column(
                 children: [
                   StackItemModel(
+                    onpress: (){},
                     count: 120,
                     title: "Food",
                     image: "assets/images/food.png",
                   ),
                   StackItemModel(
+                    onpress: (){},
                     count: 220,
                     title: "Beverages",
                     image: "assets/images/coffe.png",
                   ),
                   StackItemModel(
+                    onpress: (){
+                      nextTo(context,DessertView());
+                    },
                     count: 155,
                     title: "Desserts",
                     image: "assets/images/dessert.png",
                   ),
                   StackItemModel(
+                    onpress: (){},
                     count: 25,
                     title: "Promotions",
                     image: "assets/images/promotation.png",

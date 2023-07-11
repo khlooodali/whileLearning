@@ -1,10 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:meal_monkey/core/constant/navigation/nextpage.dart';
 import 'package:meal_monkey/core/constant/palette.dart';
 import 'package:meal_monkey/core/constant/textstyle_manager.dart';
+import 'package:meal_monkey/features/home/view.dart';
 
+import 'package:meal_monkey/features/login/view.dart';
+
+import '../../core/constant/bottom_navigation/view.dart';
 import '../../core/constant/custom_button/view.dart';
 
 import '../../core/constant/custom_textfiled.dart';
+import '../onBoarding/view.dart';
 
 class SignUpView extends StatefulWidget {
   SignUpView({super.key});
@@ -29,9 +35,6 @@ class _SignUpViewState extends State<SignUpView> {
       body: Form(
         key: key,
         child: ListView(
-          // crossAxisAlignment: CrossAxisAlignment.center,
-          //mainAxisAlignment: MainAxisAlignment.center,
-          // mainAxisSize: MainAxisSize.min,
           children: [
             Padding(
               padding: const EdgeInsets.only(top: 60, left: 136, right: 135),
@@ -126,7 +129,12 @@ class _SignUpViewState extends State<SignUpView> {
               child: CustomButton(
                 text: 'Sign Up',
                 value: 28,
-                whenTap: () {},
+                whenTap: () {
+                  nextTo(
+                    context,
+                    BottomNavigationBarView(index: 0),
+                  );
+                },
               ),
             ),
             Padding(
@@ -138,7 +146,9 @@ class _SignUpViewState extends State<SignUpView> {
                     style: getMeduimStyle(color: Palette.secondryFontColor),
                   ),
                   TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        nextTo(context, LoginView());
+                      },
                       child: Text(
                         'Login',
                         style: getBoldStyle16(color: Palette.mainColor),

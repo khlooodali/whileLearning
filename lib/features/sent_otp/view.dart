@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:meal_monkey/core/constant/navigation/nextpage.dart';
 import 'package:meal_monkey/core/constant/palette.dart';
 import 'package:meal_monkey/core/constant/textstyle_manager.dart';
+import 'package:meal_monkey/features/newpassword/view.dart';
 
 import '../../core/constant/custom_button/view.dart';
 import '../../core/constant/pin_code/view.dart';
@@ -53,7 +55,9 @@ class _SentOtpViewState extends State<SentOtpView> {
                 child: CustomButton(
                   text: 'Next',
                   value: 28,
-                  whenTap: () {},
+                  whenTap: () {
+                    nextTo(context, NewPasswordView(), isreplace: true);
+                  },
                 ),
               ),
               Padding(

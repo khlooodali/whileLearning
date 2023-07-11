@@ -1,10 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:meal_monkey/core/constant/bottom_navigation/view.dart';
+import 'package:meal_monkey/core/constant/navigation/nextpage.dart';
 import 'package:meal_monkey/core/constant/palette.dart';
 import 'package:meal_monkey/core/constant/textstyle_manager.dart';
+import 'package:meal_monkey/features/home/view.dart';
+
+import 'package:meal_monkey/features/reset_password/view.dart';
+import 'package:meal_monkey/features/signup/view.dart';
 
 import '../../core/constant/custom_button/view.dart';
 import '../../core/constant/custom_button_with_icon/view.dart';
 import '../../core/constant/custom_textfiled.dart';
+import '../onBoarding/view.dart';
 
 class LoginView extends StatefulWidget {
   LoginView({super.key});
@@ -74,7 +81,12 @@ class _LoginViewState extends State<LoginView> {
                 child: CustomButton(
                   text: 'Login',
                   value: 28,
-                  whenTap: () {},
+                  whenTap: () {
+                    nextTo(
+                      context,
+                      BottomNavigationBarView(index: 0),
+                    );
+                  },
                 ),
               ),
               Padding(
@@ -84,7 +96,9 @@ class _LoginViewState extends State<LoginView> {
                     'Forgot your password?',
                     style: getMeduimStyle(color: Palette.secondryFontColor),
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    nextTo(context, ResetPasswordView());
+                  },
                 ),
               ),
               Padding(
@@ -123,7 +137,9 @@ class _LoginViewState extends State<LoginView> {
                       style: getMeduimStyle(color: Palette.secondryFontColor),
                     ),
                     TextButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          nextTo(context, SignUpView());
+                        },
                         child: Text(
                           ' Sign Up',
                           style: getBoldStyle16(color: Palette.mainColor),

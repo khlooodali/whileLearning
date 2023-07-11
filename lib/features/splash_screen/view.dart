@@ -3,6 +3,10 @@ import 'dart:async';
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:meal_monkey/core/constant/palette.dart';
+import 'package:meal_monkey/features/onBoarding/view.dart';
+
+import '../../core/constant/navigation/nextpage.dart';
+import '../getstarted/view.dart';
 
 class SplashView extends StatefulWidget {
   const SplashView({super.key});
@@ -12,13 +16,15 @@ class SplashView extends StatefulWidget {
 }
 
 class _SplashViewState extends State<SplashView> {
-
-  Timer?timer;
+  Timer? timer;
   @override
   void initState() {
-
+    Timer(Duration(seconds: 3), () {
+      nextTo(context, OnBoardingView(), iskeep: false);
+    });
     super.initState();
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

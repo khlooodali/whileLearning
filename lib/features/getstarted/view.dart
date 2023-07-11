@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:meal_monkey/core/constant/navigation/nextpage.dart';
 import 'package:meal_monkey/core/constant/textstyle_manager.dart';
+import 'package:meal_monkey/features/login/view.dart';
+import 'package:meal_monkey/features/signup/view.dart';
 
 import '../../core/constant/custom_button/view.dart';
 import '../../core/constant/palette.dart';
@@ -72,7 +75,9 @@ class GetStartedView extends StatelessWidget {
                 child: CustomButton(
                   value: 28,
                   text: 'Login',
-                  whenTap: () {},
+                  whenTap: () {
+                    nextTo(context, LoginView(), iskeep: false);
+                  },
                 ),
               ),
               Positioned(
@@ -80,7 +85,9 @@ class GetStartedView extends StatelessWidget {
                   right: 34,
                   left: 34,
                   child: GestureDetector(
-                    onTap: () {},
+                    onTap: () {
+                      nextTo(context, SignUpView(), iskeep: false);
+                    },
                     child: Container(
                       height: 56,
                       decoration: BoxDecoration(

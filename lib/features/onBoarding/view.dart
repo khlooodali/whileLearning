@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:meal_monkey/core/constant/bottom_navigation/view.dart';
+import 'package:meal_monkey/core/constant/navigation/nextpage.dart';
+import 'package:meal_monkey/features/getstarted/view.dart';
+import 'package:meal_monkey/features/home/view.dart';
+import 'package:meal_monkey/features/login/view.dart';
 import 'package:meal_monkey/features/onBoarding/widgets/custom_indicator.dart';
 import 'package:meal_monkey/features/onBoarding/widgets/pageview_model.dart';
 
@@ -55,7 +60,7 @@ class _OnBoardingViewState extends State<OnBoardingView> {
                         duration: Duration(milliseconds: 500),
                         curve: Curves.easeIn);
                   } else {
-                    //navigation to login
+                    nextTo(context, GetStartedView(), iskeep: false);
                   }
                 },
                 value: 28,

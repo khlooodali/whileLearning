@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:meal_monkey/core/constant/navigation/nextpage.dart';
 import 'package:meal_monkey/core/constant/palette.dart';
 import 'package:meal_monkey/core/constant/textstyle_manager.dart';
 
 import '../../core/constant/custom_button/view.dart';
 
 import '../../core/constant/custom_textfiled.dart';
+import '../sent_otp/view.dart';
 
 class ResetPasswordView extends StatefulWidget {
   ResetPasswordView({super.key});
@@ -60,7 +62,12 @@ class _ResetPasswordViewState extends State<ResetPasswordView> {
                 child: CustomButton(
                   text: 'Send',
                   value: 28,
-                  whenTap: () {},
+                  whenTap: () {
+                    nextTo(
+                      context,
+                      SentOtpView(),
+                    );
+                  },
                 ),
               ),
             ],

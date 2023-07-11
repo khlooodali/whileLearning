@@ -8,6 +8,8 @@ import 'package:meal_monkey/features/home/widgets/popular_item/view.dart';
 import 'package:meal_monkey/features/home/widgets/resentitems/view.dart';
 import 'package:meal_monkey/core/constant/search_buttn/view.dart';
 
+import '../../core/constant/bottom_navigation/view.dart';
+
 class HomeView extends StatefulWidget {
   const HomeView({Key? key}) : super(key: key);
 
@@ -52,6 +54,8 @@ class _HomeViewState extends State<HomeView> {
           AllResentView(),
         ],
       ),
+
+
     );
   }
 }

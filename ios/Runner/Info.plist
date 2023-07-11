@@ -4,6 +4,13 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
+
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>want to acess your camera</string>
+
+	<key>NSCameraUsageDescription</key>
+	<string>want to acess your gallary</string>
+
 	<key>CFBundleDisplayName</key>
 	<string>Meal Monkey</string>
 	<key>CFBundleExecutable</key>

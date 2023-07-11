@@ -11,4 +11,5 @@ class Palette {
   static const Color facebookColor = Color(0xFF367FC0);
   static const Color googleColor = Color(0xFFDD4B39);
   static const Color lightColor = Color(0xFFF6F6F6);
+  static const Color dividerColor = Color(0xFF707070);
 }
