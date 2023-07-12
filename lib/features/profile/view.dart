@@ -8,32 +8,19 @@ import '../../core/constant/textstyle_manager.dart';
 class ProfileView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: ListView(
-          //crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-             Padding(
-      padding: const EdgeInsets.only(top: 53, left: 21, right: 5),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+    return ListView(
+      //crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
-            'Profile',
-            style: getextraBold(color: Palette.primaryFontColor),
+
+          Padding(
+            padding: const EdgeInsets.only(right: 129,left: 130,top: 50),
+            child: ProfileComponentView(),
           ),
-          IconButton(onPressed: () {}, icon: Icon(Icons.shopping_cart))
-        ],
-      ),
-    ),
-            Padding(
-              padding: const EdgeInsets.only(right: 129,left: 130,top: 50),
-              child: ProfileComponentView(),
-            ),
-            FormView(),
+          FormView(),
 
-          ])
+        ]);
 
-    );
+
   }
 
 }

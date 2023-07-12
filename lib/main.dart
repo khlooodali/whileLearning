@@ -21,7 +21,12 @@ class MonkeyMain extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
 
-      theme: ThemeData(scaffoldBackgroundColor: Colors.white,
+      theme: ThemeData(
+        appBarTheme: AppBarTheme(
+          backgroundColor: Colors.white,
+          centerTitle: false,
+        ),
+        scaffoldBackgroundColor: Colors.white,
       ),
       debugShowCheckedModeBanner: false,
       home: SplashView(),

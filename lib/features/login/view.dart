@@ -82,10 +82,8 @@ class _LoginViewState extends State<LoginView> {
                   text: 'Login',
                   value: 28,
                   whenTap: () {
-                    nextTo(
-                      context,
-                      BottomNavigationBarView(index: 0),
-                    );
+                   nextTo(context, BottomNavigationBarView(page: 2,));
+
                   },
                 ),
               ),

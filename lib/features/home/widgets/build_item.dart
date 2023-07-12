@@ -23,19 +23,22 @@ class AllItems extends StatelessWidget {
   ];
   @override
   Widget build(BuildContext context) {
-    return ListView.separated(
-      //physics: NeverScrollableScrollPhysics(),
-      shrinkWrap: true,
-      scrollDirection: Axis.horizontal,
-      separatorBuilder: (BuildContext context, int index) {
-        return SizedBox(
-          width: 25,
-        );
-      },
-      itemBuilder: (BuildContext context, int index) {
-        return allitems[index];
-      },
-      itemCount: allitems.length,
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 21),
+      child: ListView.separated(
+        //physics: NeverScrollableScrollPhysics(),
+        shrinkWrap: true,
+        scrollDirection: Axis.horizontal,
+        separatorBuilder: (BuildContext context, int index) {
+          return SizedBox(
+            width: 25,
+          );
+        },
+        itemBuilder: (BuildContext context, int index) {
+          return allitems[index];
+        },
+        itemCount: allitems.length,
+      ),
     );
   }
 }

@@ -12,67 +12,53 @@ class MenueView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: ListView(
-        //crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Padding(
-            padding: const EdgeInsets.only(top: 53, left: 21, right: 5),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+    return  ListView(
+      //crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+
+        Padding(
+          padding: const EdgeInsets.only(top: 50, left: 21, right: 21),
+          child: SearchButton(),
+        ),
+        SizedBox(
+          height: 30,
+        ),
+        Stack(
+          children: [
+            Image.asset("assets/images/side.png"),
+            Column(
               children: [
-                Text(
-                  'Menu',
-                  style: getextraBold(color: Palette.primaryFontColor),
+                StackItemModel(
+                  onpress: (){},
+                  count: 120,
+                  title: "Food",
+                  image: "assets/images/food.png",
                 ),
-                IconButton(onPressed: () {}, icon: Icon(Icons.shopping_cart))
+                StackItemModel(
+                  onpress: (){},
+                  count: 220,
+                  title: "Beverages",
+                  image: "assets/images/coffe.png",
+                ),
+                StackItemModel(
+                  onpress: (){
+                    nextTo(context,DessertView());
+                  },
+                  count: 155,
+                  title: "Desserts",
+                  image: "assets/images/dessert.png",
+                ),
+                StackItemModel(
+                  onpress: (){},
+                  count: 25,
+                  title: "Promotions",
+                  image: "assets/images/promotation.png",
+                ),
               ],
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.only(top: 50, left: 21, right: 21),
-            child: SearchButton(),
-          ),
-          SizedBox(
-            height: 30,
-          ),
-          Stack(
-            children: [
-              Image.asset("assets/images/side.png"),
-              Column(
-                children: [
-                  StackItemModel(
-                    onpress: (){},
-                    count: 120,
-                    title: "Food",
-                    image: "assets/images/food.png",
-                  ),
-                  StackItemModel(
-                    onpress: (){},
-                    count: 220,
-                    title: "Beverages",
-                    image: "assets/images/coffe.png",
-                  ),
-                  StackItemModel(
-                    onpress: (){
-                      nextTo(context,DessertView());
-                    },
-                    count: 155,
-                    title: "Desserts",
-                    image: "assets/images/dessert.png",
-                  ),
-                  StackItemModel(
-                    onpress: (){},
-                    count: 25,
-                    title: "Promotions",
-                    image: "assets/images/promotation.png",
-                  ),
-                ],
-              )
-            ],
-          )
-        ],
-      ),
+            )
+          ],
+        )
+      ],
     );
   }
 }

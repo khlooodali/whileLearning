@@ -25,7 +25,7 @@ class paymentView extends StatelessWidget {
         ),
         leading: IconButton(
             onPressed: () {
-              nextTo(context, BottomNavigationBarView(index: 3,),iskeep: false );
+              nextTo(context, BottomNavigationBarView(page: 4,),iskeep: false );
             },
             icon: Icon(
               Icons.arrow_back_ios,

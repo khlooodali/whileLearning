@@ -130,10 +130,7 @@ class _SignUpViewState extends State<SignUpView> {
                 text: 'Sign Up',
                 value: 28,
                 whenTap: () {
-                  nextTo(
-                    context,
-                    BottomNavigationBarView(index: 0),
-                  );
+                  nextTo(context,BottomNavigationBarView(page: 2,),);
                 },
               ),
             ),

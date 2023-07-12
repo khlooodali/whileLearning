@@ -11,19 +11,7 @@ class Alltextview extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Padding(
-          padding: const EdgeInsets.only(top: 55, left: 21, right: 5),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text(
-                'Good morning Akila!',
-                style: getextraBold(color: Palette.primaryFontColor),
-              ),
-              IconButton(onPressed: () {}, icon: Icon(Icons.shopping_cart))
-            ],
-          ),
-        ),
+
         Padding(
           padding: const EdgeInsets.only(left: 21, top: 40),
           child: Text(

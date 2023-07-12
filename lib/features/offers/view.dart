@@ -32,50 +32,38 @@ class OffersView extends StatelessWidget{
   ];
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        body: SingleChildScrollView(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Padding(
-                padding: const EdgeInsets.only(top: 53,right: 21,left: 21),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      'Good morning Akila!',
-                      style: getextraBold(color: Palette.primaryFontColor),
-                    ),
-                    IconButton(onPressed: () {}, icon: Icon(Icons.shopping_cart))
-                  ],
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(right:104 ,left: 21,top: 40),
-                child: Text('Find discounts, Offers special meals and more!',
+    return SingleChildScrollView(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+
+          Padding(
+            padding: const EdgeInsets.only(right:104 ,left: 21,top: 30),
+            child: Text('Find discounts, Offers special meals and more!',
                 overflow: TextOverflow.ellipsis,
                 style:getMeduimStyle(color: Palette.secondryFontColor)),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(left: 22,right: 197,top: 50),
-                child: CustomButton(text: "Check Offers",whenTap: (){},value: 28,height: 29),
-              ),
-              ListView.separated(
-                  scrollDirection: Axis.vertical,
-                  physics: NeverScrollableScrollPhysics(),
-                  shrinkWrap: true,
-                  itemBuilder: (context, index) {
-                    return popularlist[index];
-                  },
-                  separatorBuilder: (context, index) {
-                    return SizedBox(
-                      height: 5,
-                    );
-                  },
-                  itemCount: popularlist.length)
-
-
-            ],
           ),
-        ));
+          Padding(
+            padding: const EdgeInsets.only(left: 22,right: 197,top: 30),
+            child: CustomButton(text: "Check Offers",whenTap: (){},value: 28,height: 29),
+          ),
+          SizedBox(height: 10,),
+          ListView.separated(
+              scrollDirection: Axis.vertical,
+              physics: NeverScrollableScrollPhysics(),
+              shrinkWrap: true,
+              itemBuilder: (context, index) {
+                return popularlist[index];
+              },
+              separatorBuilder: (context, index) {
+                return SizedBox(
+                  height: 5,
+                );
+              },
+              itemCount: popularlist.length)
+
+
+        ],
+      ),
+    );
   }}

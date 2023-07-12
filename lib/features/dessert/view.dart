@@ -27,7 +27,7 @@ class DessertView extends StatelessWidget {
         ),
         leading: IconButton(
             onPressed: () {
-              nextTo(context, BottomNavigationBarView(index: 0,) );
+              nextTo(context, BottomNavigationBarView(page: 0,) );
             },
             icon: Icon(
               Icons.arrow_back_ios,
